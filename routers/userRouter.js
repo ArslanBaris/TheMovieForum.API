@@ -1,6 +1,4 @@
 const UserTrancactions = require("../database/userTransaction");
-
-c
 const userTrancactions = new UserTrancactions();
 
 const router = require("express")();
