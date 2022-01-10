@@ -29,7 +29,39 @@ class DiscussionTrancactions extends FadabHelper {
     return queryAsync(`SELECT * FROM DiscussionUser WHERE MovieId=${movieId}`);
   }
 
+  addDiscussion(values) {
+    const body_data = [
+      values.UserId,
+      values.Name,
+      values.MovieId,
+      values.CreatedDate,
+    ];
+    console.log("CallAddNewDiscussion!");
+    return queryAsync(
+      "INSERT INTO Discussions (UserId,Name,MovieId,CreatedDate) VALUES (?,?,?,?) ",
+      body_data
+    );
+  }
+  
+  updateDiscussion(values) {
+    const body_data = [
+      values.UserId,
+      values.Name,
+      values.MovieId,
+      values.CreatedDate,
+      values.Id,
+    ];
+    console.log("Updating Discussion was successfully");
+    return queryAsync(
+      "UPDATE Discussions SET UserId = ?, Name = ?, MovieId = ?,CreatedDate = ? WHERE Id = ?",
+      body_data
+    );
+  }
 
+  deleteDiscussion(Id) {
+    console.log("Deleting This Discussion !");
+    return queryAsync("DELETE FROM Discussions WHERE Id = ? ", Id);
+  }
 }
 
 module.exports = DiscussionTrancactions;
