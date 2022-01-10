@@ -29,4 +29,18 @@ router.get("/user/discussions/:userId", verifyToken, async (req, res) => {
   res.json(results);
 });
 
+router.post("/discussion", verifyToken, async (req, res) => {
+  const results = await discussionTransactions.addDiscussion(req.body);
+  res.json(results);
+});
+
+router.put("/discussion", verifyToken, async (req, res) => {
+  const results = await discussionTransactions.updateDiscussion(req.body);
+  res.json(results);
+});
+
+router.delete("/discussion/:Id", verifyToken, async (req, res) => {
+  const results = await discussionTransactions.deleteDiscussion(req.params.Id);
+  res.json(results);
+});
 module.exports = router;
