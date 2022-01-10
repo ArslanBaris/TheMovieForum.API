@@ -28,6 +28,39 @@ class MessageTrancactions extends FadabHelper {
     );
   }
 
+  addMessage(values) {
+    const body_data = [
+      values.UserId,
+      values.MessageText,
+      values.DiscussionId,
+      values.CreatedDate,
+    ];
+    console.log("CallAddNewMessage!");
+    return queryAsync(
+      "INSERT INTO Messages (UserId,MessageText,DiscussionId,CreatedDate) VALUES (?,?,?,?) ",
+      body_data
+    );
+  }
+ 
+  updateMessage(values) {
+    const body_data = [
+      values.UserId,
+      values.MessageText,
+      values.DiscussionId,
+      values.CreatedDate,
+      values.Id,
+    ];
+    console.log("Updating Message was successfully");
+    return queryAsync(
+      "UPDATE Messages SET UserId = ?, MessageText = ?, DiscussionId = ?,CreatedDate = ? WHERE Id = ?",
+      body_data
+    );
+  }
+
+  deleteMessage(Id) {
+    console.log("Deleting This Message !");
+    return queryAsync("DELETE FROM Messages WHERE Id = ? ", Id);
+  }
 }
 
 module.exports = MessageTrancactions;
