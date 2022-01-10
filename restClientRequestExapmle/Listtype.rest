@@ -10,3 +10,28 @@ token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NDExMzU0NDQsImV4cCI6MTY0
 content-type: application/json
 
 ###
+
+POST http://localhost:5000/listtype HTTP/1.1
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NDExMzU0NDQsImV4cCI6MTY0MjM0NTA0NH0.ZK2gSvYvQNzhoDlTFR-E35U1XVqxDpJxGkq1gv6ddlg
+content-type: application/json
+
+{
+    "TypeName":"denemeName"
+}
+
+###
+
+PUT http://localhost:5000/listtype HTTP/1.1
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NDExMzU0NDQsImV4cCI6MTY0MjM0NTA0NH0.ZK2gSvYvQNzhoDlTFR-E35U1XVqxDpJxGkq1gv6ddlg
+content-type: application/json
+
+{
+    "Id":4,
+    "TypeName":"denemeNameUPDATE"
+}
+
+###
+
+DELETE http://localhost:5000/listtype/4 HTTP/1.1
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NDExMzU0NDQsImV4cCI6MTY0MjM0NTA0NH0.ZK2gSvYvQNzhoDlTFR-E35U1XVqxDpJxGkq1gv6ddlg
+content-type: application/json
