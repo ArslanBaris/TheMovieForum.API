@@ -25,6 +25,20 @@ router.get("/user/messages/:userId", verifyToken, async (req, res) => {
   res.json(results);
 });
 
+router.post("/message", verifyToken, async (req, res) => {
+  const results = await MessageTransactions.addMessage(req.body);
+  res.json(results);
+});
+
+router.put("/message", verifyToken, async (req, res) => {
+  const results = await MessageTransactions.updateMessage(req.body);
+  res.json(results);
+});
+
+router.delete("/message/:Id", verifyToken, async (req, res) => {
+  const results = await MessageTransactions.deleteMessage(req.params.Id);
+  res.json(results);
+});
 
 
 module.exports = router;
