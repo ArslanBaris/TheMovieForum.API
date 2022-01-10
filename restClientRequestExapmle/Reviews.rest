@@ -19,4 +19,39 @@ GET  http://localhost:5000/user/reviews/9 HTTP/1.1
 token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NDExMzU0NDQsImV4cCI6MTY0MjM0NTA0NH0.ZK2gSvYvQNzhoDlTFR-E35U1XVqxDpJxGkq1gv6ddlg
 content-type: application/json
 
+###
+
+POST http://localhost:5000/review HTTP/1.1
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NDExMzU0NDQsImV4cCI6MTY0MjM0NTA0NH0.ZK2gSvYvQNzhoDlTFR-E35U1XVqxDpJxGkq1gv6ddlg
+content-type: application/json
+
+{
+    "UserId": 9,
+    "Title":"deneme@",
+    "MovieId": 1,
+    "MessageText": "deneme@-TextUPDATE",
+    "CreatedDate": "2022-01-01"
+}
+
+###
+
+PUT http://localhost:5000/review HTTP/1.1
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NDExMzU0NDQsImV4cCI6MTY0MjM0NTA0NH0.ZK2gSvYvQNzhoDlTFR-E35U1XVqxDpJxGkq1gv6ddlg
+content-type: application/json
+
+{
+    "Id":1,
+    "UserId": 1,
+    "Title":"denemeUPDATE",
+    "MovieId": 1,
+    "MessageText": "deneme-TextUPDATE",
+    "CreatedDate": "2022-01-01"
+}
+
+###
+
+DELETE http://localhost:5000/review/1 HTTP/1.1
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NDExMzU0NDQsImV4cCI6MTY0MjM0NTA0NH0.ZK2gSvYvQNzhoDlTFR-E35U1XVqxDpJxGkq1gv6ddlg
+content-type: application/json
+
 
