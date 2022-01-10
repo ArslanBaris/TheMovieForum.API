@@ -12,6 +12,19 @@ router.get("/listtypeAll", verifyToken, async (req, res) => {
   res.json(results);
 });
 
+router.post("/listtype", verifyToken, async (req, res) => {
+  const results = await listtypeTransactions.addListType(req.body);
+  res.json(results);
+});
 
+router.put("/listtype", verifyToken, async (req, res) => {
+  const results = await listtypeTransactions.updateListType(req.body);
+  res.json(results);
+});
+
+router.delete("/listtype/:Id", verifyToken, async (req, res) => {
+  const results = await listtypeTransactions.deleteListType(req.params.Id);
+  res.json(results);
+});
 
 module.exports = router;
