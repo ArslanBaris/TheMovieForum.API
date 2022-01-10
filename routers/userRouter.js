@@ -30,6 +30,11 @@ router.get("/verifyEmail/:Email", async (req, res) => {
   res.send({"isExist":false})  
 });
 
+router.post("/user", async (req, res) => {
+  const users = await userTrancactions.addUser(Object.assign(req.body));
+  res.json(users);
+});
+
 router.put("/user", verifyToken, async (req, res) => {
   const users = await userTrancactions.updateUser(Object.assign(req.body));
   res.json(users);

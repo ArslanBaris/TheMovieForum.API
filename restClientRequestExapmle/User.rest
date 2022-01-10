@@ -10,3 +10,48 @@ content-type: application/json
 
 ###
 
+GET http://localhost:5000/verifyUserName/arslan HTTP/1.1
+content-type: application/json
+
+###
+
+GET http://localhost:5000/verifyEmail/arslan@gmaail.com HTTP/1.1
+content-type: application/json
+
+###
+
+POST http://localhost:5000/user HTTP/1.1
+content-type: application/json
+
+{
+    "UserName":"apicalldenemeTOKENSIZ",
+    "FirstName":"apicalldenemeTOKENSIZ",
+    "LastName":"apicalldenemeTOKENSIZ",
+    "Email": "apicalldenemeTOKENSIZ@gmail.com",
+    "Password": "apicalldeneme123",
+    "AvatarUrl":"exampleurl.com"
+}
+
+###
+
+PUT http://localhost:5000/user HTTP/1.1
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NDExMzU0NDQsImV4cCI6MTY0MjM0NTA0NH0.ZK2gSvYvQNzhoDlTFR-E35U1XVqxDpJxGkq1gv6ddlg
+content-type: application/json
+
+{
+    "Id": 3 ,
+    "UserName":"apicalupdate",
+    "FirstName":"apicalldeneme",
+    "LastName":"apicalupdate",
+    "Email": "apicalldeneme@gmail.com",
+    "Password": "apicalldeneme123",
+    "AvatarUrl":"exampleurl.com"
+}
+
+###
+
+DELETE http://localhost:5000/user/1 HTTP/1.1
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NDExMzU0NDQsImV4cCI6MTY0MjM0NTA0NH0.ZK2gSvYvQNzhoDlTFR-E35U1XVqxDpJxGkq1gv6ddlg
+content-type: application/json
+
+
