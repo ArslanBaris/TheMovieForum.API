@@ -8,7 +8,7 @@ router.get("/review/:Id", verifyToken, async (req, res) => {
   res.json(results);
 });
 
-router.get("/reviewAll", async (req, res) => {
+router.get("/reviewAll",verifyToken, async (req, res) => {
   const results = await reviewTransactions.getAllReviews(req.body);
   res.json(results);
 });
