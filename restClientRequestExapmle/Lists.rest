@@ -1,4 +1,4 @@
-GET  http://localhost:5000/list/4 HTTP/1.1
+GET  http://localhost:5000/list/72 HTTP/1.1
 token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NDExMzU0NDQsImV4cCI6MTY0MjM0NTA0NH0.ZK2gSvYvQNzhoDlTFR-E35U1XVqxDpJxGkq1gv6ddlg
 content-type: application/json
 
@@ -10,7 +10,7 @@ content-type: application/json
 
 ###
 
-GET  http://localhost:5000/userList/9/1 HTTP/1.1
+GET  http://localhost:5000/userList/8/3 HTTP/1.1
 token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NDExMzU0NDQsImV4cCI6MTY0MjM0NTA0NH0.ZK2gSvYvQNzhoDlTFR-E35U1XVqxDpJxGkq1gv6ddlg
 content-type: application/json
 
@@ -27,7 +27,7 @@ token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NDExMzU0NDQsImV4cCI6MTY0
 content-type: application/json
 
 {
-    "UserId": 3,
+    "UserId": 8,
     "ListType": 1,
     "MovieId": 1
 }
@@ -39,15 +39,15 @@ token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NDExMzU0NDQsImV4cCI6MTY0
 content-type: application/json
 
 {
-    "UserId": 3,
+    "UserId": 9,
     "ListType": 1,
     "MovieId": 10,
-    "Id":1
+    "Id":94
 }
 
 ###
 
-DELETE http://localhost:5000/list/8/3/634649 HTTP/1.1
+DELETE http://localhost:5000/list/9/1/10 HTTP/1.1
 token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NDExMzU0NDQsImV4cCI6MTY0MjM0NTA0NH0.ZK2gSvYvQNzhoDlTFR-E35U1XVqxDpJxGkq1gv6ddlg
 content-type: application/json
 

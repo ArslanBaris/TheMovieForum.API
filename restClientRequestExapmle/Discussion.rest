@@ -15,7 +15,7 @@ token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NDExMzU0NDQsImV4cCI6MTY0
 content-type: application/json
 
 ###
-GET  http://localhost:5000/user/discussions/9 HTTP/1.1
+GET  http://localhost:5000/user/discussions/8 HTTP/1.1
 token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NDExMzU0NDQsImV4cCI6MTY0MjM0NTA0NH0.ZK2gSvYvQNzhoDlTFR-E35U1XVqxDpJxGkq1gv6ddlg
 content-type: application/json
 
@@ -26,7 +26,7 @@ token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NDExMzU0NDQsImV4cCI6MTY0
 content-type: application/json
 
 {
-    "UserId": 3,
+    "UserId": 8,
     "Name":"denemeName",
     "MovieId": 1,
     "CreatedDate": "2022-01-01"
@@ -39,8 +39,8 @@ token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NDExMzU0NDQsImV4cCI6MTY0
 content-type: application/json
 
 {
-    "Id":1,
-    "UserId": 3,
+    "Id":10,
+    "UserId": 8,
     "Name":"denemeName-UPDATE",
     "MovieId": 1,
     "CreatedDate": "2022-01-01"
@@ -48,7 +48,7 @@ content-type: application/json
 
 ###
 
-DELETE http://localhost:5000/discussion/3 HTTP/1.1
+DELETE http://localhost:5000/discussion/10 HTTP/1.1
 token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NDExMzU0NDQsImV4cCI6MTY0MjM0NTA0NH0.ZK2gSvYvQNzhoDlTFR-E35U1XVqxDpJxGkq1gv6ddlg
 content-type: application/json
 

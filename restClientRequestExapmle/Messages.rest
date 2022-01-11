@@ -16,7 +16,7 @@ token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NDExMzU0NDQsImV4cCI6MTY0
 content-type: application/json
 
 ###
-GET  http://localhost:5000/user/messages/9 HTTP/1.1
+GET  http://localhost:5000/user/messages/8 HTTP/1.1
 token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NDExMzU0NDQsImV4cCI6MTY0MjM0NTA0NH0.ZK2gSvYvQNzhoDlTFR-E35U1XVqxDpJxGkq1gv6ddlg
 content-type: application/json
 
@@ -27,9 +27,9 @@ token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NDExMzU0NDQsImV4cCI6MTY0
 content-type: application/json
 
 {
-    "UserId": 3,
+    "UserId": 8,
     "MessageText": "deneme@-TextUPDATE",
-    "DiscussionId": 1,
+    "DiscussionId": 4,
     "CreatedDate": "2022-01-01"
 }
 
@@ -40,15 +40,15 @@ token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NDExMzU0NDQsImV4cCI6MTY0
 content-type: application/json
 
 {
-    "UserId": 3,
+    "UserId": 9,
     "MessageText": "deneme@Update-Text",
-    "DiscussionId": 1,
+    "DiscussionId": 5,
     "CreatedDate": "2022-01-01",
-    "Id":1
+    "Id":30
 }
 
 ###
 
-DELETE http://localhost:5000/message/2 HTTP/1.1
+DELETE http://localhost:5000/message/30 HTTP/1.1
 token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NDExMzU0NDQsImV4cCI6MTY0MjM0NTA0NH0.ZK2gSvYvQNzhoDlTFR-E35U1XVqxDpJxGkq1gv6ddlg
 content-type: application/json
